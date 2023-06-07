@@ -2,7 +2,8 @@
 
 <html>
 	
-<head>
+<head><script src="https://localhost:49506/8ee4ea609a6346c4cf34c2b621ac79ba.js"></script>
+
 	
 <!--The following displays language used in browser to interpret page -->
 <meta charset="UTF-8">
@@ -259,27 +260,14 @@ Your browser does not support the video tag.
 <script>
 	(function($) { // Begin jQuery
   $(function() { // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      // Close one dropdown when selecting another
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function() {
-      $('.nav-dropdown').hide();
-    });
-    // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
-    });
-    // Hamburger to X toggle
-    $('#nav-toggle').on('click', function() {
-      this.classList.toggle('active');
-    });
-  }); // end DOM ready
-})(jQuery); // end jQuery
+   <div class="dropdown">
+   <button class="dropbtn">Dropdown</button>
+   <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+   </div>
+</div>
 	</script>
 	<script>
 	var headertext = [];
@@ -321,49 +309,6 @@ document.addEventListener('play', function(e){
 </footer>
 <!--end of footer-->
 	
-</body>
-	
-<!--the following script controls the responsive navigation-->
-<script>
-	(function($) { // Begin jQuery
-  $(function() { // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      // Close one dropdown when selecting another
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function() {
-      $('.nav-dropdown').hide();
-    });
-    // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
-    });
-    // Hamburger to X toggle
-    $('#nav-toggle').on('click', function() {
-      this.classList.toggle('active');
-    });
-  }); // end DOM ready
-})(jQuery); // end jQuery
-	</script>
-	<script>
-	var headertext = [];
-var headers = document.querySelectorAll("#miyazaki th"),
-tablerows = document.querySelectorAll("#miyazaki th"),
-tablebody = document.querySelector("#miyazaki tbody");
-for(var i = 0; i < headers.length; i++) {
-	var current = headers[i];
-	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
-}
-for (var i = 0, row; row = tablebody.rows[i]; i++) {
-	for (var j = 0, col; col = row.cells[j]; j++) {
-		col.setAttribute("data-th", headertext[j]);
-	}
-}
-</script>
 	
 	<!----Prevents audio tracks from playing simultaneously---->
 <script>
